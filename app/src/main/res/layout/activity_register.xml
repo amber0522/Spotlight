@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.sol.spotlight.RegisterActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="아래 버튼을 클릭해 사진/동영상을 선택해주세요" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="center">
+
+
+                <ImageView
+                    android:id="@+id/selected_img_view"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/video_default"
+                    android:layout_marginRight="10dp"/>
+
+                <Button
+                    android:id="@+id/buttonLoadPicture_1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="loadImagefromGallery"
+                    android:text="선택"/>
+
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="학교를 입력해주세요" />
+
+                <EditText
+                    android:id="@+id/register_school"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="School"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="직업을 입력해주세요" />
+
+                <EditText
+                    android:id="@+id/register_occupation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Occupation"
+                    tools:layout_editor_absoluteX="0dp"
+                    tools:layout_editor_absoluteY="0dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="직장을 입력해주세요" />
+
+                <EditText
+                    android:id="@+id/register_workplace"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Workplace" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="성별을 선택해주세요" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+                    <Button
+                        android:id="@+id/gender_male"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/changing_button"
+                        android:text="남자" />
+
+                    <Button
+                        android:id="@+id/gender_female"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/changing_button"
+                        android:text="여자" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="생년월일을 입력해주세요" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="horizontal"
+                    android:paddingTop="10dp">
+
+                    <Spinner
+                        android:id="@+id/spinner_year"
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown"/>
+
+                    <Spinner
+                        android:id="@+id/spinner_month"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/spinner_year"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown" />
+
+                    <Spinner
+                        android:id="@+id/spinner_day"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/spinner_month"
+                        android:background="@android:drawable/btn_dropdown"
+                        android:spinnerMode="dropdown" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="지역을 입력해주세요" />
+
+                <Spinner
+                    android:id="@+id/register_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/btn_dropdown"
+                    android:hint="Location"
+                    android:spinnerMode="dropdown" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="닉네임을 입력해주세요" />
+
+                <EditText
+                    android:id="@+id/register_nickname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Nickname" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="키를 입력해주세요" />
+
+                <EditText
+                    android:id="@+id/register_height"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Height" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="체형을 입력해주세요" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/body_1"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/changing_button"
+                        android:text="마른" />
+
+                    <Button
+                        android:id="@+id/body_2"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/changing_button"
+                        android:text="슬림탄탄" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/body_3"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/changing_button"
+                        android:text="보통" />
+
+                    <Button
+                        android:id="@+id/body_4"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/changing_button"
+                        android:text="통통한" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <Button
+                        android:id="@+id/body_5"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/changing_button"
+                        android:text="근육질" />
+
+                    <Button
+                        android:id="@+id/body_6"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/changing_button"
+                        android:text="건장한" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="흡연 여부를 입력해주세요" />
+
+                <EditText
+                    android:id="@+id/register_smoke"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Smoke" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="주량을 입력해주세요" />
+
+                <EditText
+                    android:id="@+id/register_drink"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Drink" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="종교를 입력해주세요" />
+
+                <EditText
+                    android:id="@+id/register_religion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Religion" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="성격을 입력해주세요" />
+
+                <EditText
+                    android:id="@+id/register_personality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Personality" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="100">
+
+                <Button
+                    android:id="@+id/register_submit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/changing_button"
+                    android:text="등록하기" />
+
+                <Button
+                    android:id="@+id/register_later"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="50"
+                    android:background="@drawable/changing_button"
+                    android:text="취소" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="회원가입"
+            android:textSize="25dp"
+            android:textColor="@android:color/white"
+
+            android:textAlignment="center"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+
+
+</LinearLayout>

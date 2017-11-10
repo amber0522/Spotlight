@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.sol.spotlight.RegisterLaterActivity"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나중에 등록하시겠습니까?\n'예'를 터치하시면 로그아웃됩니다."
+        android:gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="20dp">
+
+        <Button
+            android:id="@+id/register_later_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/changing_button"
+            android:layout_margin="5dp"
+            android:text="예"/>
+
+        <Button
+            android:id="@+id/register_later_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/changing_button"
+            android:layout_margin="5dp"
+            android:text="아니오"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "45950469501",
+    "firebase_url": "https://spotlight-f88ab.firebaseio.com",
+    "project_id": "spotlight-f88ab",
+    "storage_bucket": "spotlight-f88ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:45950469501:android:0298cf93c337ef58",
+        "android_client_info": {
+          "package_name": "com.example.sol.spotlight"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "45950469501-2nsubngos1lt0a48bqfeujko1e9egt99.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sol.spotlight",
+            "certificate_hash": "1f4fe26b233b8930127f7dd2e7632727c4a709a7"
+          }
+        },
+        {
+          "client_id": "45950469501-0bmkg5g7kerjtarc6ac0icvt12gjid61.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCroQC1Cu9d0WINzfou9A6Nu8PR74euUqI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "45950469501-0bmkg5g7kerjtarc6ac0icvt12gjid61.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
