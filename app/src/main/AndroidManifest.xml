@@ -23,7 +23,8 @@
         <activity android:name=".RegisterLaterActivity" />
         <activity android:name=".RejectedActivity" />
         <activity android:name=".AcceptedActivity" />
-        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".LoginActivity" />
+        <activity android:name=".RealMainActivity"></activity>
     </application>
 
 </manifest>

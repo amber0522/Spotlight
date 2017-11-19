@@ -12,6 +12,7 @@ import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -29,6 +30,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
+
+import java.io.File;
 
 
 class UserRegister {
@@ -305,32 +309,27 @@ public class RegisterActivity extends AppCompatActivity {
         super.onActivityResult(requestCode, resultCode, data);
         try {
             // When an Image is picked
-            if (requestCode == RESULT_LOAD_IMG && resultCode == RESULT_OK
-                    && null != data) {
+            if (requestCode == RESULT_LOAD_IMG && resultCode == RESULT_OK) {
                 // Get the Image from data
                 selectedImage = data.getData();
-                String[] filePathColumn = { MediaStore.Images.Media.DATA };
-                // Get the cursor
-                Cursor cursor = getContentResolver().query(selectedImage,
-                        filePathColumn, null, null, null);
-                // Move to first row
-                cursor.moveToFirst();
-                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-                imgDecodableString = cursor.getString(columnIndex);
-                cursor.close();
+                Picasso.with(RegisterActivity.this).load(selectedImage).noPlaceholder().centerCrop().fit().into(imgView);
+//                String[] filePathColumn = { MediaStore.Images.Media.DATA };
+//                // Get the cursor
+//                Cursor cursor = getContentResolver().query(selectedImage,
+//                        filePathColumn, null, null, null);
+//                // Move to first row
+//                cursor.moveToFirst();
+//                int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+//                imgDecodableString = cursor.getString(columnIndex);
+//                cursor.close();
+//
+//                final BitmapFactory.Options options = new BitmapFactory.Options();
+//                options.inJustDecodeBounds = true;
+//                Drawable d = new BitmapDrawable(getResources(), BitmapFactory.decodeFile(imgDecodableString, options));
+//                // imgBtn1.setBackgroundResource(0);
+//                imgView.setImageResource(0);
+//                imgView.setBackground(d);
 
-                final BitmapFactory.Options options = new BitmapFactory.Options();
-                options.inJustDecodeBounds = true;
-                Drawable d = new BitmapDrawable(getResources(), BitmapFactory.decodeFile(imgDecodableString, options));
-                // imgBtn1.setBackgroundResource(0);
-                imgView.setImageResource(0);
-                imgView.setBackground(d);
-                //imgView.setImageBitmap(BitmapFactory.decodeFile(imgDecodableString));
-
-                //imgBtn1.setBackground(d);
-//                imgBtn1.setImageBitmap(BitmapFactory
-//                        .decodeFile(imgDecodableString));
-                // Set the Image in ImageView after decoding the String
             } else {
                 Toast.makeText(this, "You haven't picked Image",
                         Toast.LENGTH_LONG).show();

@@ -32,6 +32,9 @@ public class LoginActivity extends AppCompatActivity {
                 Object chk_status = dataSnapshot.getValue();
                 if(chk_status == null) {
                     mDatabase.child("Users").child(user_id).child("status").setValue("-1");
+                    Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                    startActivity(intent);
+                    finish();
                 }
                 else {
                     String status = chk_status.toString();
