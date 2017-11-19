@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sol.spotlight.RegisterResultActivity"
+    tools:context="com.example.sol.spotlight.RejectedActivity"
     android:gravity="center"
     android:orientation="vertical">
 
@@ -12,15 +12,16 @@
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="회원 가입을 위한 관리자의 심사가 시작되었습니다\n조금만 기다려주세요!"
-        android:layout_margin="10dp"/>
+        android:text="관리자에 의해 가입이 거절되었습니다.\n프로필을 다시 작성해주세요!"
+        android:gravity="center"
+        android:layout_margin="5dp" />
 
     <Button
-        android:id="@+id/logout"
+        android:id="@+id/retry"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/changing_button"
-        android:text="로그아웃"/>
+        android:text="다시 작성하기"
+        android:layout_margin="5dp" />
 
 </LinearLayout>

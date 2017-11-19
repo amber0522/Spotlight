@@ -4,17 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.sol.spotlight.RegisterResultActivity"
     android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context="com.example.sol.spotlight.AcceptedActivity">
 
     <TextView
         android:id="@+id/result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        android:text="회원 가입을 위한 관리자의 심사가 시작되었습니다\n조금만 기다려주세요!"
-        android:layout_margin="10dp"/>
+        android:text="관리자에 의해 가입이 승인되었습니다.\n다른 사용자들이 심사중입니다!"
+        android:gravity="center"
+        android:layout_margin="5dp" />
 
     <Button
         android:id="@+id/logout"

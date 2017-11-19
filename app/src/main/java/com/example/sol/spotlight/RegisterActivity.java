@@ -46,7 +46,7 @@ class UserRegister {
     public String drink;
     public String religion;
     public String personality;
-    public int status;
+    public String status;
 
     public UserRegister(String school, String occupation, String gender, String birthday_year, String birthday_month, String birthday_day, String location, String nickname, String height, String body, String smoke, String drink, String religion, String personality) {
         this.school = school;
@@ -63,7 +63,7 @@ class UserRegister {
         this.drink = drink;
         this.religion = religion;
         this.personality = personality;
-        this.status = 1;
+        this.status = "1";
     }
 }
 

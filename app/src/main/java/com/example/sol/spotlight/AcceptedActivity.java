@@ -7,18 +7,15 @@ import android.view.View;
 import android.widget.Button;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
-public class RegisterResultActivity extends AppCompatActivity {
+public class AcceptedActivity extends AppCompatActivity {
 
-    private FirebaseAuth auth;
-    private DatabaseReference mDatabase;
     Button btn;
+    private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_result);
+        setContentView(R.layout.activity_accepted);
 
         btn =  (Button) findViewById(R.id.logout);
         auth = FirebaseAuth.getInstance();
@@ -27,11 +24,10 @@ public class RegisterResultActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 auth.signOut();
-                Intent i = new Intent(RegisterResultActivity.this, MainActivity.class);
+                Intent i = new Intent(AcceptedActivity.this, MainActivity.class);
                 startActivity(i);
                 finish();
             }
         });
-
     }
 }

@@ -3,6 +3,7 @@
     package="com.example.sol.spotlight">
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,7 +20,10 @@
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".RegisterResultActivity" />
-        <activity android:name=".RegisterLaterActivity"></activity>
+        <activity android:name=".RegisterLaterActivity" />
+        <activity android:name=".RejectedActivity" />
+        <activity android:name=".AcceptedActivity" />
+        <activity android:name=".LoginActivity"></activity>
     </application>
 
 </manifest>

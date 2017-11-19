@@ -10,7 +10,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class RegisterResultActivity extends AppCompatActivity {
+public class RejectedActivity extends AppCompatActivity {
 
     private FirebaseAuth auth;
     private DatabaseReference mDatabase;
@@ -18,20 +18,20 @@ public class RegisterResultActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register_result);
-
-        btn =  (Button) findViewById(R.id.logout);
+        setContentView(R.layout.activity_rejected);
+        btn = (Button) findViewById(R.id.retry);
         auth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                auth.signOut();
-                Intent i = new Intent(RegisterResultActivity.this, MainActivity.class);
+                mDatabase.child("Users").child(auth.getCurrentUser().getUid()).child("status").setValue("1");
+                Intent i = new Intent(RejectedActivity.this, RegisterActivity.class);
                 startActivity(i);
-                finish();
             }
         });
-
     }
+
+
 }
