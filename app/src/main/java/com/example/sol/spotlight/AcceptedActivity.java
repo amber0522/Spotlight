@@ -11,6 +11,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class AcceptedActivity extends AppCompatActivity {
 
     Button btn;
+    Button chatBtn;
     private FirebaseAuth auth;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +19,7 @@ public class AcceptedActivity extends AppCompatActivity {
         setContentView(R.layout.activity_accepted);
 
         btn =  (Button) findViewById(R.id.logout);
+        chatBtn = (Button) findViewById(R.id.temp_chat_btn);
         auth = FirebaseAuth.getInstance();
 
         btn.setOnClickListener(new View.OnClickListener() {
@@ -25,6 +27,15 @@ public class AcceptedActivity extends AppCompatActivity {
             public void onClick(View v) {
                 auth.signOut();
                 Intent i = new Intent(AcceptedActivity.this, MainActivity.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        chatBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(AcceptedActivity.this, ChatRoomActivity.class);
                 startActivity(i);
                 finish();
             }

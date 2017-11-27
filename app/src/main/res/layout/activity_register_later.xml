@@ -8,9 +8,10 @@
     android:gravity="center"
     android:orientation="vertical">
 
-    <TextView
+    <com.example.sol.spotlight.SpoqaTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="25dp"
         android:text="나중에 등록하시겠습니까?\n'예'를 터치하시면 로그아웃됩니다."
         android:gravity="center"/>
 

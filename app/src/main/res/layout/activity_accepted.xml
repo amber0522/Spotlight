@@ -17,6 +17,14 @@
         android:layout_margin="5dp" />
 
     <Button
+        android:id="@+id/temp_chat_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="채팅"
+        android:layout_margin="10dp"
+        android:background="@drawable/changing_button"/>
+
+    <Button
         android:id="@+id/logout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

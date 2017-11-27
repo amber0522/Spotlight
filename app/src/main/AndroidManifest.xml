@@ -20,11 +20,14 @@
         </activity>
         <activity android:name=".RegisterActivity" />
         <activity android:name=".RegisterResultActivity" />
-        <activity android:name=".RegisterLaterActivity" />
+        <activity android:name=".RegisterLaterActivity"></activity>
         <activity android:name=".RejectedActivity" />
         <activity android:name=".AcceptedActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".RealMainActivity"></activity>
+        <activity android:name=".RealMainActivity" />
+        <activity android:name=".ChatRoomActivity" />
+        <activity android:name=".ViewPagerPracticeActivity"></activity>
+        <activity android:name=".IntroduceDetailActivity"></activity>
     </application>
 
 </manifest>
